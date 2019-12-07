@@ -90,6 +90,8 @@ export const createRootNavigator = () => {
             }
 
         },
+
+        
         {
             headerMode: "none",
             mode: "modal"
