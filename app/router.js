@@ -14,14 +14,13 @@ let screen = Dimensions.get('window');
 
 export const Tabs = createBottomTabNavigator({
  
-    'Bookcase':{
-        screen:Bookcase,
-        navigationOption:{
-            tabBarLabel:'Bookcase',
-            tabBarIcon:({tintColor}) => <Icon name="open-book" type="entypo" size={28} color="tintColor"/>
-        }
+    'Bookcase': {
+        screen: Bookcase,
+        navigationOptions: {
+            tabBarLabel: 'Bookcase',
+            tabBarIcon: ({tintColor}) => <Icon name="open-book" type="entypo" size={28} color={tintColor}/>
+        },
     },
-
     'Explore': {
         screen: Explore,
         navigationOptions: {
@@ -29,23 +28,21 @@ export const Tabs = createBottomTabNavigator({
             tabBarIcon: ({tintColor}) => <Icon name="ios-map" type="ionicon" size={28} color={tintColor}/>
         },
     },
-
-    'AddBook': {
-        screen:AddBook,
-        navigationOption:{
-            tabBarLabel:'AddBook',
-            tabBarIcon:({tintColor}) => <Icon name="ios-add-circle-outline" type="ionicon" size={28} color={tintColor}/>
-        }
+    'Add Book': {
+        screen: AddBook,
+        navigationOptions: {
+            tabBarLabel: 'Add Book',
+            tabBarIcon: ({tintColor}) => <Icon name="ios-add-circle-outline" type="ionicon" size={28}
+                                               color={tintColor}/>
+        },
     },
-    
-    'Lists':{
-        screen:Lists,
-        navigationOption:{
-            tabBarLabel:'Lists',
-            tabBarIcon:({tintColor}) => <Icon  name="" type="ionicon" size="28" color={tintColor}/>
-        }
-    },  
-
+    'Lists': {
+        screen: Lists,
+        navigationOptions: {
+            tabBarLabel: 'Lists',
+            tabBarIcon: ({tintColor}) => <Icon name="list" type="entypo" size={28} color={tintColor}/>
+        },
+    },
     'My Profile': {
         screen: Profile,
         navigationOptions: {
@@ -53,7 +50,6 @@ export const Tabs = createBottomTabNavigator({
             tabBarIcon: ({tintColor}) => <Icon name="ios-person" type="ionicon" size={28} color={tintColor}/>
         },
     },
-
 
 });
 
@@ -91,7 +87,7 @@ export const createRootNavigator = () => {
 
         },
 
-        
+
         {
             headerMode: "none",
             mode: "modal"
